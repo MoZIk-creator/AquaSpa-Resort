@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AquaSpa Resort — горячие источники в Чундже. Термальные бассейны, номера Deluxe, ресторан и отдых круглый год.">
+
+    <title>AquaSpa Resort — Горячие источники в Чундже</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+        :root {
+            --deep: #164F50;
+            --deep-2: #103B3C;
+            --teal: #168C89;
+            --aqua: #27B7B0;
+            --gold: #C7A66A;
+            --gold-light: #E8D4AE;
+            --cream: #F6EFE3;
+            --sand: #E9DDC8;
+            --white: #FFFFFF;
+            --text: #294546;
+            --muted: #6D7D7B;
+            --line: rgba(22, 79, 80, .12);
+            --radius: 18px;
+            --shadow: 0 8px 28px rgba(16, 59, 60, .06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 36px));
+            margin: 0 auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(246, 239, 227, .94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--deep);
+            font-size: 17px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .logo b {
+            font-weight: 500;
+        }
+
+        .logo-mark {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--deep);
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .menu a:hover {
+            color: var(--teal);
+        }
+
+        .nav-button,
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 18px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 800;
+            transition: .2s ease;
+        }
+
+        .nav-button {
+            background: var(--deep);
+            color: white;
+        }
+
+        .nav-button:hover,
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(39,183,176,.13), transparent 30%),
+                linear-gradient(180deg, #F6EFE3 0%, #EEE3D1 100%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            right: -190px;
+            top: -190px;
+            width: 540px;
+            height: 540px;
+            border: 1px solid rgba(39,183,176,.20);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 60px rgba(39,183,176,.04),
+                0 0 0 120px rgba(39,183,176,.025);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 100px 0 135px;
+            max-width: 820px;
+        }
+
+        .eyebrow,
+        .section-label {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--teal);
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+        }
+
+        .hero h1,
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+            letter-spacing: -.02em;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            color: var(--deep);
+            font-size: clamp(52px, 8vw, 94px);
+            line-height: .98;
+        }
+
+        .hero h1 span {
+            color: var(--teal);
+        }
+
+        .hero h2 {
+            margin-top: 18px;
+            color: var(--deep);
+            font-size: clamp(22px, 3vw, 34px);
+            line-height: 1.15;
+        }
+
+        .hero-text {
+            margin-top: 17px;
+            color: var(--teal);
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 26px;
+        }
+
+        .button-primary {
+            background: var(--deep);
+            color: white;
+        }
+
+        .button-outline {
+            border: 1px solid var(--line);
+            background: rgba(255,255,255,.4);
+            color: var(--deep);
+        }
+
+        .hero-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(16,59,60,.96);
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .hero-stats div {
+            min-height: 92px;
+            padding: 17px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid rgba(255,255,255,.10);
+        }
+
+        .hero-stats div:last-child {
+            border-right: 0;
+        }
+
+        .hero-stats strong {
+            color: var(--gold-light);
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .hero-stats span {
+            margin-top: 6px;
+            color: rgba(255,255,255,.62);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: .07em;
+        }
+
+        /* ================= GENERAL ================= */
+
+        .section {
+            padding: 82px 0;
+        }
+
+        .intro {
+            background: var(--white);
+        }
+
+        .sand-section,
+        .chundja {
+            background: #EFE5D5;
+        }
+
+        .dark-section {
+            background: var(--deep);
+            color: white;
+        }
+
+        .dark-section h2,
+        .dark-section h3 {
+            color: white;
+        }
+
+        .dark-section p {
+            color: rgba(255,255,255,.72);
+        }
+
+        .section-label.light {
+            color: var(--gold-light);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        h2 {
+            color: var(--deep);
+            font-size: clamp(34px, 4.5vw, 54px);
+            line-height: 1.08;
+        }
+
+        h3 {
+            color: var(--deep);
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        .lead {
+            margin-bottom: 14px;
+            color: var(--text);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            gap: 15px;
+        }
+
+        .cards.three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .feature-card {
+            padding: 28px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card .icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 19px;
+            border-radius: 12px;
+            background: rgba(39,183,176,.10);
+            color: var(--teal);
+            font-size: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 7px;
+            font-size: 17px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+        }
+
+        /* ================= POOLS ================= */
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+
+        .section-heading > p {
+            max-width: 420px;
+        }
+
+        .temperature-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .temperature-card {
+            min-height: 205px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            color: white;
+        }
+
+        .temperature-card::before {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            right: -55px;
+            top: -50px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 50%;
+        }
+
+        .temperature-card span,
+        .temperature-card strong,
+        .temperature-card h3 {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .temperature-card span {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            opacity: .72;
+        }
+
+        .temperature-card strong {
+            margin: 4px 0;
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        .temperature-card h3 {
+            font-size: 13px;
+        }
+
+        .cool { background: #367F87; }
+        .warm { background: #A97849; }
+        .hot { background: #AE5B46; }
+        .winter { background: #6E7062; }
+
+        .pool-info {
+            margin-top: 65px;
+            display: grid;
+            grid-template-columns: 1.35fr .65fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .pool-info-main p {
+            margin-top: 14px;
+        }
+
+        .pool-quote {
+            padding: 32px;
+            border-radius: var(--radius);
+            background: var(--deep);
+        }
+
+        .pool-quote p {
+            color: rgba(255,255,255,.84);
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            line-height: 1.45;
+        }
+
+        .quote-mark {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--gold);
+            font-family: serif;
+            font-size: 58px;
+            line-height: .5;
+        }
+
+        /* ================= WATER ================= */
+
+        .water-block {
+            margin-top: 60px;
+            padding: 42px;
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 50px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .water-block p + p {
+            margin-top: 13px;
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            border: 1px solid rgba(199,166,106,.34);
+            background: rgba(199,166,106,.09);
+            border-radius: 14px;
+        }
+
+        .notice-icon {
+            flex: 0 0 38px;
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--deep);
+            font-weight: 800;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .service-card {
+            min-height: 190px;
+            padding: 27px;
+            background: rgba(255,255,255,.76);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .service-card > span {
+            color: var(--teal);
+            font-size: 21px;
+        }
+
+        .service-card h3 {
+            margin: 17px 0 7px;
+            font-size: 17px;
+        }
+
+        .service-card p {
+            font-size: 13px;
+        }
+
+        .amenities,
+        .season-pills,
+        .guest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .amenities {
+            margin-top: 22px;
+        }
+
+        .amenities span,
+        .season-pills span,
+        .guest-list span {
+            padding: 8px 13px;
+            border: 1px solid rgba(22,79,80,.13);
+            border-radius: 999px;
+            background: rgba(255,255,255,.42);
+            color: var(--deep);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* ================= ROOMS ================= */
+
+        .section-intro {
+            max-width: 760px;
+            margin: -10px 0 30px;
+        }
+
+        .big-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .big-number strong {
+            color: var(--teal);
+            font-family: "Playfair Display", serif;
+            font-size: 62px;
+            line-height: .8;
+        }
+
+        .big-number span {
+            color: var(--muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .room-card {
+            min-height: 285px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .featured-room {
+            background: var(--deep);
+        }
+
+        .room-top {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gold);
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-weight: 800;
+        }
+
+        .room-card h3 {
+            margin-top: auto;
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+        }
+
+        .featured-room h3 {
+            color: white;
+        }
+
+        .room-card p {
+            margin: 9px 0 18px;
+            font-size: 13px;
+        }
+
+        .featured-room p {
+            color: rgba(255,255,255,.68);
+        }
+
+        .room-capacity {
+            color: var(--teal);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 800;
+        }
+
+        .featured-room .room-capacity {
+            color: var(--gold-light);
+        }
+
+        .included {
+            margin-top: 55px;
+            padding: 38px;
+            display: grid;
+            grid-template-columns: .7fr 1.3fr;
+            gap: 50px;
+            background: var(--sand);
+            border-radius: var(--radius);
+        }
+
+        .check-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 11px 25px;
+            list-style: none;
+        }
+
+        .check-list li {
+            font-size: 13px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            display: inline-grid;
+            place-items: center;
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+            border-radius: 50%;
+            background: var(--aqua);
+            color: white;
+            font-size: 10px;
+        }
+
+        .price-note {
+            margin-top: 22px;
+            padding: 22px;
+            border-left: 3px solid var(--gold);
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        /* ================= RULES ================= */
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .rule-card {
+            padding: 25px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .rule-card span,
+        .rule-card small {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .rule-card strong {
+            display: block;
+            margin: 8px 0 3px;
+            color: var(--deep);
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+        }
+
+        .rules-text {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .rules-text h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .rules-text li {
+            margin: 6px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .rules-footer,
+        .event-footer,
+        .skin-note {
+            margin-top: 26px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* ================= SAFETY ================= */
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .safety-card {
+            padding: 27px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: white;
+        }
+
+        .safety-number {
+            color: var(--aqua);
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .safety-card h3 {
+            margin: 18px 0 8px;
+            font-size: 17px;
+        }
+
+        .safety-card p {
+            font-size: 13px;
+        }
+
+        .skin-note {
+            padding: 19px 21px;
+            border-left: 3px solid var(--gold);
+            background: #F0E7D8;
+        }
+
+        /* ================= SEASONS ================= */
+
+        .season-section {
+            padding: 78px 0;
+            background: var(--teal);
+            color: white;
+        }
+
+        .season-section h2 {
+            color: white;
+        }
+
+        .season-section p {
+            max-width: 760px;
+            margin: 13px 0 22px;
+            color: rgba(255,255,255,.78);
+        }
+
+        .season-section .season-pills span {
+            border-color: rgba(255,255,255,.20);
+            background: rgba(255,255,255,.07);
+            color: white;
+        }
+
+        /* ================= EVENTS ================= */
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .event-card {
+            padding: 28px;
+            background: rgba(255,255,255,.66);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .event-icon {
+            color: var(--teal);
+            font-size: 22px;
+        }
+
+        .event-card h3 {
+            margin: 18px 0 7px;
+            font-size: 17px;
+        }
+
+        .event-card p {
+            font-size: 13px;
+        }
+
+        /* ================= BOOKING ================= */
+
+        .booking {
+            padding: 76px 0;
+            background: var(--deep);
+            color: white;
+        }
+
+        .booking-inner {
+            display: grid;
+            grid-template-columns: 1.35fr .65fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .booking h2 {
+            color: white;
+        }
+
+        .booking p {
+            color: rgba(255,255,255,.70);
+            font-size: 13px;
+        }
+
+        .booking-box {
+            padding: 27px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: var(--radius);
+            background: rgba(255,255,255,.05);
+        }
+
+        .booking-title {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+            margin-bottom: 7px;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            margin-top: 18px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: var(--aqua);
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            padding: 50px 0 24px;
+            background: var(--deep-2);
+            color: rgba(255,255,255,.65);
+        }
+
+        .footer .logo {
+            color: white;
+        }
+
+        .footer p,
+        .footer a {
+            font-size: 11px;
+        }
+
+        .footer p {
+            margin-top: 12px;
+        }
+
+        .footer h3 {
+            margin-bottom: 10px;
+            color: white;
+            font-size: 11px;
+        }
+
+        .footer a {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255,255,255,.55);
+        }
+
+        .footer a:hover {
+            color: #A7E6E1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr .8fr .8fr 1fr;
+            gap: 35px;
+        }
+
+        .copyright {
+            margin-top: 35px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,.09);
+            color: rgba(255,255,255,.35);
+            font-size: 10px;
+        }
+
+        .to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 50;
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--deep);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .to-top:hover {
+            background: var(--teal);
+        }
+
+        /* ================= ОБЩИЕ ГАЛЕРЕИ ================= */
+
+        .description-gallery {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-photo {
+            height: 190px;
+            overflow: hidden;
+            border-radius: var(--radius);
+            background: var(--sand);
+            border: 1px solid var(--line);
+        }
+
+        .gallery-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .gallery-photo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Большое первое фото */
+
+        .description-gallery.large {
+            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-rows: 190px 190px;
+        }
+
+        .description-gallery.large .gallery-photo:first-child {
+            grid-row: 1 / 3;
+            height: 392px;
+        }
+
+        /* ================= ГЛАВНАЯ ФОТОГАЛЕРЕЯ ================= */
+
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .gallery-intro {
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+        .gallery-intro p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .photo-collage {
+            display: grid;
+            grid-template-columns: 1.35fr .8fr .8fr;
+            grid-template-rows: 220px 220px;
+            gap: 12px;
+        }
+
+        .photo-slot {
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            border-radius: var(--radius);
+            background:
+                linear-gradient(135deg, rgba(39,183,176,.14), rgba(233,221,200,.9)),
+                var(--sand);
+            border: 1px solid var(--line);
+        }
+
+        .photo-slot:first-child {
+            grid-row: 1 / 3;
+        }
+
+        .photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .photo-slot:hover img {
+            transform: scale(1.025);
+        }
+
+        .photo-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 7px;
+            padding: 20px;
+            text-align: center;
+            color: var(--deep);
+        }
+
+        .photo-placeholder strong {
+            font-size: 14px;
+        }
+
+        .photo-placeholder span {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .photo-label {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            z-index: 3;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(16,59,60,.86);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            backdrop-filter: blur(7px);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 950px) {
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding-bottom: 125px;
+            }
+
+            .two-column,
+            .pool-info,
+            .water-block,
+            .included,
+            .booking-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .cards.three,
+            .service-grid,
+            .room-grid,
+            .rules-grid,
+            .safety-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .temperature-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .description-gallery,
+            .description-gallery.large {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .description-gallery.large .gallery-photo:first-child {
+                grid-row: auto;
+                height: 190px;
+            }
+
+            .gallery-photo {
+                height: 180px;
+            }
+
+            .photo-collage {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 230px 170px 170px;
+            }
+
+            .photo-slot:first-child {
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            .container {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .section {
+                padding: 62px 0;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .hero-bottom {
+                position: static;
+            }
+
+            .hero-content {
+                padding: 76px 0 60px;
+            }
+
+            .hero-stats,
+            .cards.three,
+            .temperature-grid,
+            .service-grid,
+            .room-grid,
+            .rules-grid,
+            .safety-grid,
+            .event-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats div {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255,255,255,.08);
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading > p {
+                margin-top: 14px;
+            }
+
+            .check-list,
+            .rules-text {
+                grid-template-columns: 1fr;
+            }
+
+            .water-block,
+            .included {
+                padding: 27px;
+            }
+
+            .nav-button {
+                display: none;
+            }
+
+            .description-gallery,
+            .description-gallery.large {
+                grid-template-columns: 1fr;
+            }
+
+            .description-gallery .gallery-photo,
+            .description-gallery.large .gallery-photo:first-child {
+                height: 210px;
+            }
+
+            .photo-collage {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 210px);
+            }
+
+            .photo-slot:first-child {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">A</span>
+            <span>AquaSpa <b>Resort</b></span>
+        </a>
+
+        <nav class="menu">
+            <a href="#gallery">Фото</a>
+            <a href="#about">О комплексе</a>
+            <a href="#pools">Бассейны</a>
+            <a href="#services">Услуги</a>
+            <a href="#rooms">Проживание</a>
+            <a href="#rules">Правила</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a href="#booking" class="nav-button">
+            Забронировать
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- ================= ГЛАВНАЯ ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            Чунджа • Алматинская область
+        </div>
+
+        <h1>
+            AquaSpa <span>Resort</span>
+        </h1>
+
+        <h2>
+            Горячие источники в Чундже
+        </h2>
+
+        <p class="hero-text">
+            Отдых, тепло и комфорт в одном месте
+        </p>
+
+        <p class="hero-description">
+            AquaSpa Resort — современный комплекс отдыха в Чундже,
+            где природные термальные воды сочетаются с комфортным
+            проживанием, рестораном и другими услугами.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#booking" class="button button-primary">
+                Забронировать отдых
+            </a>
+
+            <a href="#about" class="button button-outline">
+                Узнать больше
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+
+        <div class="container hero-stats">
+
+            <div>
+                <strong>4</strong>
+                <span>открытых бассейна</span>
+            </div>
+
+            <div>
+                <strong>40</strong>
+                <span>номеров Deluxe</span>
+            </div>
+
+            <div>
+                <strong>365</strong>
+                <span>дней в году</span>
+            </div>
+
+            <div>
+                <strong>2024</strong>
+                <span>год открытия</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ГЛАВНАЯ ФОТОГАЛЕРЕЯ ================= -->
+
+<section class="section gallery-section" id="gallery">
+
+    <div class="container">
+
+        <div class="gallery-intro">
+
+            <div class="section-label">
+                Фотогалерея
+            </div>
+
+            <h2>
+                Посмотрите, как выглядит AquaSpa Resort
+            </h2>
+
+        </div>
+
+        <div class="photo-collage">
+
+            <div class="photo-slot">
+                <img src="images/photo1.jpg"
+                     alt="Территория AquaSpa Resort">
+                <div class="photo-placeholder">
+                   </div>
+                <div class="photo-label">Территория</div>
+            </div>
+
+            <div class="photo-slot">
+                <img src="images/photo2.jpg"
+                     alt="Термальный бассейн">
+                <div class="photo-placeholder">
+                   
+                 </div>
+                <div class="photo-label">Бассейн</div>
+            </div>
+
+            <div class="photo-slot">
+                <img src="images/photo3.jpg"
+                     alt="Номер AquaSpa Resort">
+                <div class="photo-placeholder">
+                </div>
+                <div class="photo-label">Номер</div>
+            </div>
+
+            <div class="photo-slot">
+                <img src="images/photo4.jpg"
+                     alt="Зона отдыха">
+                <div class="photo-placeholder">
+                </div>
+                <div class="photo-label">Зона отдыха</div>
+            </div>
+
+            <div class="photo-slot">
+                <img src="images/photo5.jpg"
+                     alt="Ресторан AquaSpa Resort">
+                <div class="photo-placeholder">
+                </div>
+                <div class="photo-label">Ресторан</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ВВЕДЕНИЕ ================= -->
+
+<section class="section intro">
+
+    <div class="container two-column">
+
+        <div>
+
+            <div class="section-label">
+                Добро пожаловать
+            </div>
+
+            <h2>
+                Ваш отдых начинается здесь
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p class="lead">
+                Здесь можно провести выходные с семьёй,
+                отдохнуть с друзьями или остановиться
+                во время путешествия.
+            </p>
+
+            <p>
+                Гостей ждут открытые бассейны с разной
+                температурой воды, уютные номера и спокойная
+                атмосфера вдали от городской суеты.
+            </p>
+
+            <p>
+                Комплекс работает круглый год и подходит
+                для отдыха в любое время сезона.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ОСНОВНЫЕ ПРЕИМУЩЕСТВА ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="cards three">
+
+            <article class="feature-card">
+
+                <div class="icon">♨</div>
+
+                <h3>
+                    Термальные бассейны
+                </h3>
+
+                <p>
+                    Четыре открытых бассейна с прохладной,
+                    тёплой и горячей водой в зависимости
+                    от сезона.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="icon">⌂</div>
+
+                <h3>
+                    Комфортное проживание
+                </h3>
+
+                <p>
+                    Номера категории Deluxe для двух и трёх
+                    гостей, а также смежные номера для семей
+                    и компаний.
+                </p>
+
+            </article>
+
+            <article class="feature-card">
+
+                <div class="icon">✦</div>
+
+                <h3>
+                    Всё на одной территории
+                </h3>
+
+                <p>
+                    Ресторан, караоке-бар, массажный кабинет,
+                    детская игровая комната и другие удобства.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= О КОМПЛЕКСЕ ================= -->
+
+<section class="section dark-section" id="about">
+
+    <div class="container">
+
+        <div class="two-column">
+
+            <div>
+
+                <div class="section-label light">
+                    О комплексе
+                </div>
+
+                <h2>
+                    AquaSpa Resort —
+                    место для комфортного отдыха
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p>
+                    AquaSpa Resort был открыт 6 декабря
+                    2024 года в Чундже.
+                </p>
+
+                <p>
+                    Мы создали пространство, в котором гости
+                    могут не просто посетить бассейны, а провести
+                    полноценный день или несколько дней,
+                    наслаждаясь отдыхом, вкусной едой
+                    и спокойной атмосферой.
+                </p>
+
+                <p>
+                    Вода поступает из подземных термальных вод
+                    Карадалинского месторождения через скважину.
+                    Она формируется в глубинных слоях земли
+                    и естественным образом нагревается
+                    за счёт геотермального тепла.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= БАССЕЙНЫ ================= -->
+
+<section class="section" id="pools">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Термальная вода
+                </div>
+
+                <h2>
+                    Температура воды
+                </h2>
+
+            </div>
+
+            <p>
+                Выбирайте комфортную температуру
+                и наслаждайтесь природным теплом
+                термальной воды.
+            </p>
+
+        </div>
+
+
+        <div class="temperature-grid">
+
+            <div class="temperature-card cool">
+                <span>Летом</span>
+                <strong>20–25°C</strong>
+                <h3>Прохладные бассейны</h3>
+            </div>
+
+            <div class="temperature-card warm">
+                <span>Летом</span>
+                <strong>30–35°C</strong>
+                <h3>Тёплые бассейны</h3>
+            </div>
+
+            <div class="temperature-card hot">
+                <span>Летом</span>
+                <strong>38–45°C</strong>
+                <h3>Горячий термальный бассейн</h3>
+            </div>
+
+            <div class="temperature-card winter">
+                <span>Зимой</span>
+                <strong>45–47°C</strong>
+                <h3>Два небольших бассейна</h3>
+            </div>
+
+            <div class="temperature-card winter">
+                <span>Зимой</span>
+                <strong>35–36°C</strong>
+                <h3>Большие бассейны</h3>
+            </div>
+
+        </div>
+
+
+        <div class="pool-info">
+
+            <div class="pool-info-main">
+
+                <div class="section-label">
+                    Бассейны
+                </div>
+
+                <h2>
+                    Тепло в любое время года
+                </h2>
+
+                <p>
+                    На территории комплекса расположены четыре
+                    открытых бассейна. Большие бассейны имеют
+                    глубину до 1,6 метра.
+                </p>
+
+                <p>
+                    Также предусмотрены два небольших бассейна
+                    с небольшой глубиной — примерно по колено
+                    взрослому человеку.
+                </p>
+
+                <p>
+                    Для отдыха у воды доступны шезлонги.
+                    Летом гости могут наслаждаться свежим воздухом
+                    и открытой территорией, а зимой — атмосферой
+                    тёплой минеральной воды на фоне прохладного воздуха.
+                </p>
+
+            </div>
+
+
+            <div class="pool-quote">
+
+                <span class="quote-mark">“</span>
+
+                <p>
+                    Контраст тёплой минеральной воды
+                    и прохладного воздуха создаёт особую
+                    атмосферу зимнего отдыха.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- МИНЕРАЛЬНАЯ ВОДА -->
+
+        <div class="water-block">
+
+            <div>
+
+                <div class="section-label">
+                    Натуральная минеральная вода
+                </div>
+
+                <h2>
+                    Вода из глубин земли
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Термальная вода поступает в бассейны
+                    в естественном виде. Согласно информации
+                    комплекса, перед подачей она не проходит
+                    химическую обработку и в неё не добавляются
+                    химические реагенты.
+                </p>
+
+                <p>
+                    Минеральный состав воды подтверждён
+                    лабораторным исследованием.
+                    Подробные показатели представлены
+                    в результатах анализа.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="notice">
+
+            <div class="notice-icon">i</div>
+
+            <div>
+
+                <h3>
+                    Отдых и расслабление
+                </h3>
+
+                <p>
+                    Тёплая минеральная вода может способствовать
+                    расслаблению мышц и уменьшению ощущения
+                    напряжения.
+                </p>
+
+                <p>
+                    Реакция на термальную воду индивидуальна.
+                    При наличии заболеваний кожи,
+                    сердечно-сосудистой системы, после недавних
+                    операций, во время беременности или при
+                    особом медицинском наблюдении перед посещением
+                    необходимо проконсультироваться с врачом.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= УСЛУГИ ================= -->
+
+<section class="section sand-section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Инфраструктура
+                </div>
+
+                <h2>
+                    Всё для комфортного отдыха
+                </h2>
+
+            </div>
+
+            <p>
+                Всё необходимое для полноценного отдыха
+                находится на одной территории.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <article class="service-card">
+                <span>♨</span>
+                <h3>Открытые бассейны</h3>
+                <p>
+                    Четыре бассейна с прохладной,
+                    тёплой и горячей водой.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <span>〰</span>
+                <h3>Водные горки</h3>
+                <p>
+                    Горки для взрослых и детей.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <span>◆</span>
+                <h3>Ресторан</h3>
+                <p>
+                    Возможность пообедать и провести время
+                    за едой, не покидая территорию комплекса.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <span>♪</span>
+                <h3>Караоке-бар</h3>
+                <p>
+                    Пространство для вечернего отдыха
+                    и общения.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <span>♡</span>
+                <h3>Детская игровая комната</h3>
+                <p>
+                    Отдельное пространство
+                    для детского досуга.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <span>✦</span>
+                <h3>Массажный кабинет</h3>
+                <p>
+                    Массажные процедуры
+                    за дополнительную плату.
+                </p>
+            </article>
+
+        </div>
+
+
+        <div class="amenities">
+
+            <span>Шезлонги</span>
+            <span>Кальянная зона</span>
+            <span>Wi-Fi</span>
+            <span>Охраняемая парковка</span>
+
+        </div>
+
+
+        <!-- ФОТОГАЛЕРЕЯ УСЛУГ -->
+
+        <div class="description-gallery">
+
+            <div class="gallery-photo">
+                <img src="images/services1.jpg"
+                     alt="Бассейны AquaSpa Resort">
+            </div>
+
+            <div class="gallery-photo">
+                <img src="images/services2.jpg"
+                     alt="Водные горки">
+            </div>
+
+            <div class="gallery-photo">
+                <img src="images/services3.jpg"
+                     alt="Ресторан AquaSpa Resort">
+            </div>
+
+            <div class="gallery-photo">
+                <img src="images/services4.jpg"
+                     alt="Зона отдыха AquaSpa Resort">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ПРОЖИВАНИЕ ================= -->
+
+<section class="section" id="rooms">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Проживание
+                </div>
+
+                <h2>
+                    Комфортные номера Deluxe
+                </h2>
+
+            </div>
+
+            <div class="big-number">
+
+                <strong>40</strong>
+
+                <span>
+                    номеров<br>
+                    Deluxe
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <p class="section-intro">
+            Гости могут выбрать подходящий вариант размещения
+            в зависимости от количества человек и формата отдыха.
+            Все номера позволяют совместить отдых в термальных
+            бассейнах с удобством размещения.
+        </p>
+
+
+        <div class="room-grid">
+
+            <article class="room-card">
+
+                <div class="room-top">
+                    <span>01</span>
+                    <span>DELUXE</span>
+                </div>
+
+                <h3>
+                    Двухместный Deluxe
+                </h3>
+
+                <p>
+                    Номер для комфортного размещения
+                    двух гостей.
+                </p>
+
+                <div class="room-capacity">
+                    2 гостя
+                </div>
+
+            </article>
+
+
+            <article class="room-card featured-room">
+
+                <div class="room-top">
+                    <span>02</span>
+                    <span>DELUXE</span>
+                </div>
+
+                <h3>
+                    Трёхместный Deluxe
+                </h3>
+
+                <p>
+                    Номер, рассчитанный
+                    на трёх гостей.
+                </p>
+
+                <div class="room-capacity">
+                    3 гостя
+                </div>
+
+            </article>
+
+
+            <article class="room-card">
+
+                <div class="room-top">
+                    <span>03</span>
+                    <span>FAMILY</span>
+                </div>
+
+                <h3>
+                    Смежные номера
+                </h3>
+
+                <p>
+                    Двухместный и трёхместный номера,
+                    соединённые межкомнатной дверью.
+                </p>
+
+                <div class="room-capacity">
+                    до 5 гостей
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ФОТОГАЛЕРЕЯ НОМЕРОВ -->
+
+        <div class="description-gallery large">
+
+            <div class="gallery-photo">
+                <img src="images/room1.jpg"
+                     alt="Номер Deluxe">
+            </div>
+
+            <div class="gallery-photo">
+                <img src="images/room2.jpg"
+                     alt="Интерьер номера Deluxe">
+            </div>
+
+            <div class="gallery-photo">
+                <img src="images/room3.jpg"
+                     alt="Семейный номер">
+            </div>
+
+        </div>
+
+
+        <!-- ЧТО ВХОДИТ -->
+
+        <div class="included">
+
+            <div>
+
+                <div class="section-label">
+                    В стоимость входит
+                </div>
+
+                <h2>
+                    Всё необходимое
+                    для отдыха
+                </h2>
+
+            </div>
+
+
+            <ul class="check-list">
+
+                <li>Завтрак</li>
+                <li>Халат и полотенце</li>
+                <li>Гигиенический набор</li>
+                <li>Фен</li>
+                <li>Комнатные тканевые тапочки</li>
+                <li>Телевизор</li>
+                <li>Кондиционер</li>
+                <li>Посещение открытых бассейнов</li>
+                <li>Доступ к зоне отдыха</li>
+                <li>Wi-Fi</li>
+                <li>Парковка для гостей</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="price-note">
+
+            <h3>
+                Стоимость проживания
+            </h3>
+
+            <p>
+                Стоимость зависит от выбранной категории номера,
+                даты заезда и сезона.
+            </p>
+
+            <p>
+                В комплексе действует актуальный прайс
+                со специальными скидками.
+            </p>
+
+            <p>
+                Для получения актуальной информации о стоимости
+                и предложениях свяжитесь с менеджерами комплекса.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ПРАВИЛА ================= -->
+
+<section class="section dark-section" id="rules">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label light">
+                    Бронирование
+                </div>
+
+                <h2 style="color:white;">
+                    Правила проживания
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="rules-grid">
+
+            <div class="rule-card">
+                <span>Заезд</span>
+                <strong>14:00</strong>
+            </div>
+
+            <div class="rule-card">
+                <span>Выезд</span>
+                <strong>12:00</strong>
+            </div>
+
+            <div class="rule-card">
+                <span>Бронирование</span>
+                <strong>100%</strong>
+                <small>оплата</small>
+            </div>
+
+            <div class="rule-card">
+                <span>Дети от 3 лет</span>
+                <strong>20 000 ₸</strong>
+                <small>за проживание</small>
+            </div>
+
+        </div>
+
+
+        <div class="rules-text">
+
+            <div>
+
+                <h3>
+                    Посещение бассейнов
+                </h3>
+
+                <ul>
+                    <li>Только для проживающих гостей.</li>
+                    <li>Отдельного тарифа без проживания нет.</li>
+                    <li>Почасовое и дневное посещение без размещения не предусмотрено.</li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Питание
+                </h3>
+
+                <ul>
+                    <li>Готовую еду и напитки приносить запрещено.</li>
+                    <li>Разрешаются фрукты, сладости, снэки и питьевая вода.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <p class="rules-footer">
+            Такой формат позволяет ограничивать количество гостей
+            и поддерживать более комфортную атмосферу отдыха.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= БЕЗОПАСНОСТЬ ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Чистота и безопасность
+                </div>
+
+                <h2>
+                    Забота о качестве воды
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="safety-grid">
+
+            <div class="safety-card">
+
+                <div class="safety-number">
+                    01
+                </div>
+
+                <h3>
+                    Замена воды
+                </h3>
+
+                <p>
+                    Вода в бассейнах полностью сливается
+                    и заменяется каждые 3–4 дня.
+                </p>
+
+            </div>
+
+
+            <div class="safety-card">
+
+                <div class="safety-number">
+                    02
+                </div>
+
+                <h3>
+                    Круглосуточная циркуляция
+                </h3>
+
+                <p>
+                    Система перелива обеспечивает постоянную
+                    циркуляцию и обновление воды в течение суток.
+                </p>
+
+            </div>
+
+
+            <div class="safety-card">
+
+                <div class="safety-number">
+                    03
+                </div>
+
+                <h3>
+                    Рекомендации
+                </h3>
+
+                <p>
+                    При хронических заболеваниях, беременности,
+                    после операций или при медицинском наблюдении
+                    рекомендуется консультация врача.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="skin-note">
+
+            При заболеваниях кожи, включая дерматит,
+            реакция на термальную воду может быть индивидуальной.
+            В период обострения необходимо получить консультацию
+            лечащего врача.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ВРЕМЯ ГОДА ================= -->
+
+<section class="season-section">
+
+    <div class="container">
+
+        <div class="section-label light">
+            365 дней в году
+        </div>
+
+        <h2>
+            Отдых в любое время года
+        </h2>
+
+        <p>
+            Летом гости могут наслаждаться открытой территорией,
+            отдыхом у бассейнов и свежим воздухом.
+            В холодное время года особое удовольствие создаёт
+            контраст прохладного воздуха и тёплой минеральной воды.
+        </p>
+
+
+        <div class="season-pills">
+
+            <span>
+                ☀ Лето — свежий воздух
+            </span>
+
+            <span>
+                ❄ Зима — горячая вода
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ПРАЗДНИКИ ================= -->
+
+<section class="section sand-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Праздничные мероприятия
+                </div>
+
+                <h2>
+                    Особенные моменты вместе
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="event-grid">
+
+            <article class="event-card">
+
+                <div class="event-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Новый год
+                </h3>
+
+                <p>
+                    Праздничная шоу-программа
+                    и гала-ужин.
+                </p>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <div class="event-icon">
+                    ☀
+                </div>
+
+                <h3>
+                    Наурыз
+                </h3>
+
+                <p>
+                    Праздничные угощения,
+                    программы и танцевальные мероприятия.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <p class="event-footer">
+
+            В обычные дни специальные мероприятия не проводятся.
+            Актуальную программу на конкретные праздничные даты
+            можно уточнить у менеджеров при бронировании.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ЧУНДЖА ================= -->
+
+<section class="section chundja">
+
+    <div class="container two-column">
+
+        <div>
+
+            <div class="section-label">
+                Окрестности
+            </div>
+
+            <h2>
+                Откройте для себя Чунджу
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="lead">
+                Чунджа — популярное направление для отдыха
+                в Казахстане благодаря термальным источникам
+                и природным достопримечательностям региона.
+            </p>
+
+            <p>
+                Сюда приезжают не только ради горячих источников,
+                но и чтобы посетить каньоны и другие интересные
+                места поблизости.
+            </p>
+
+            <p>
+                AquaSpa Resort подходит как для полноценного отдыха
+                на несколько дней, так и для остановки во время
+                путешествия.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ГОСТИ ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Наши гости
+                </div>
+
+                <h2>
+                    Нас выбирают гости
+                    из разных городов и стран
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="guest-list">
+
+            <span>Алматы</span>
+            <span>Алматинская область</span>
+            <span>Астана</span>
+            <span>Семей</span>
+            <span>Шымкент</span>
+            <span>Тараз</span>
+            <span>Актау</span>
+            <span>Атырау</span>
+            <span>Китай</span>
+            <span>Кыргызстан</span>
+            <span>Россия</span>
+            <span>Узбекистан</span>
+            <span>Европа</span>
+            <span>Япония</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= БРОНИРОВАНИЕ ================= -->
+
+<section class="booking" id="booking">
+
+    <div class="container booking-inner">
+
+        <div>
+
+            <div class="section-label light">
+                AquaSpa Resort
+            </div>
+
+            <h2>
+                Откройте для себя атмосферу
+                термального отдыха
+            </h2>
+
+            <p>
+                Проведите время с близкими,
+                насладитесь тёплой минеральной водой
+                и комфортом нашего комплекса.
+            </p>
+
+        </div>
+
+
+        <div class="booking-box">
+
+            <div class="booking-title">
+                Забронировать отдых
+            </div>
+
+            <p>
+                Для уточнения стоимости, свободных номеров
+                и условий бронирования свяжитесь
+                с нашими менеджерами.
+            </p>
+
+            <a class="whatsapp-button"
+               href="https://wa.me/77012222359"
+               target="_blank">
+                Написать в WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer" id="contacts">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+
+                <span class="logo-mark">
+                    A
+                </span>
+
+                <span>
+                    AquaSpa <b>Resort</b>
+                </span>
+
+            </a>
+
+            <p>
+                Горячие источники в Чундже.<br>
+                Отдых, тепло и комфорт в одном месте.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Навигация
+            </h3>
+
+            <a href="#about">
+                О комплексе
+            </a>
+
+            <a href="#pools">
+                Бассейны
+            </a>
+
+            <a href="#services">
+                Услуги
+            </a>
+
+            <a href="#rooms">
+                Проживание
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Отдых
+            </h3>
+
+            <a href="#rules">
+                Правила
+            </a>
+
+            <a href="#booking">
+                Бронирование
+            </a>
+
+            <a href="#home">
+                Главная
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Контакты
+            </h3>
+
+            <p>
+                WhatsApp:
+                <a href="https://wa.me/77012222359" target="_blank">
+                    +7 701 222 23 59
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="container copyright">
+
+        © 2026 AquaSpa Resort.
+        Все права защищены.
+
+    </div>
+
+</footer>
+
+
+<!-- КНОПКА НАВЕРХ -->
+
+<a href="#home" class="to-top">
+    ↑
+</a>
+
+</body>
+</html>
